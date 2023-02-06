@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cointracker-2ec44": {
+      "hosting": {
+        "cryptos": [
+          "cointracker-2ec44"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cointracker-2ec44"
+  }
+}

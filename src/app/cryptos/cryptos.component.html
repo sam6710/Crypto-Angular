@@ -1,0 +1,43 @@
+<div id="coins_div">
+  <h2 id="coins">Coins</h2>
+    <div id="monedas">
+      <div id="div_1" *ngFor="let moneda of monedas">
+        <div (click)="addToFav(moneda.id)">
+          <div hidden>{{ moneda.id }}</div>
+          <img src="{{ moneda.image.small }}" alt="imagen de la crypto">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <nav class="pagination-sm" aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href>1</a></li>
+          <li class="page-item"><a class="page-link" href>2</a></li>
+          <li class="page-item"><a class="page-link" href>3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- <div class="col-lg-2 d-flex flex-column justify-content-start align-items-start">
+      <table class="allMonedas">
+        <tr *ngFor="let moneda of monedas | slice : (page - 1) * pageSize : page * pageSize">
+          <td (click)="addToFav(moneda.id)">
+            {{ moneda.name }}
+          </td>
+        </tr>
+      </table>
+      <ngb-pagination
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]="monedas.length"></ngb-pagination>
+    </div> -->
+</div>

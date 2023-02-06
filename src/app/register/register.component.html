@@ -1,0 +1,33 @@
+<div id="div_register">
+    <div id="register" class="vh-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-4 p-5 shadow-sm border rounded-3">
+            <h2 class="text-center mb-4 text-primary">Register Form</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <!-- <input type="text" class="form-control border border-primary" [(ngModel)]="name" [ngModelOptions]="{standalone:true}"> -->
+                    <input type="text" class="form-control border border-primary">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <!-- <input type="email" class="form-control border border-primary" aria-describedby="emailHelp" [(ngModel)]="email" [ngModelOptions]="{standalone:true}"> -->
+                    <input type="email" class="form-control border border-primary" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <!-- <input type="password" class="form-control border border-primary" [(ngModel)]="password" [ngModelOptions]="{standalone:true}"> -->
+                    <input type="password" class="form-control border border-primary">
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary" type="submit" (click)="registerEmailPassword()">Register</button>
+                </div>
+            </form>
+        </div>
+        <div id="register_google" class="col-md-4 p-5 shadow-sm border rounded-3">
+            <h2 class="text-center mb-4 text-primary">Register with Google</h2>
+            <div class="d-grid">
+                <button class="btn btn-primary" type="submit" (click)="registerGoogle()">Register</button>
+            </div>
+        </div>
+    </div>
+</div>

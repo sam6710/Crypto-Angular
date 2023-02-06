@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+#landing{
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url(../../imagenes/fondo.jpg);
+    height: 140vh;
+}
+h1{
+    color: lightgray;
+    text-align: center;
+}
+#div_home{
+    display: flex;
+}
+#intro{
+    width: 60%;
+}
+#intro h3{
+    margin-left: 2.6rem;
+    padding-top: 1rem;
+    color: white;
+}
