@@ -1,1 +1,15 @@
-<p>detalle works!</p>
+<h1>{{ moneda.name }}</h1>
+<div id="info_moneda">
+    <div id="info">
+        <img src="{{ moneda.image.large }}" alt="imagen de la criptomoneda">
+        <div id="texto_moneda">
+            <h3>{{ moneda.symbol }}</h3>
+            <p>{{ moneda.description.en }}</p>
+        </div>
+    </div>
+    <div id="links">
+        <a href="{{ moneda.links.homepage }}" target="_blank">Coin Page</a>|
+        <a href="https://twitter.com/{{ moneda.links.twitter_screen_name }}" target="_blank">Coin Twitter</a>|
+        <a href="{{ moneda.links.repos_url.github[0] }}" target="_blank">Coin Github</a>
+    </div>
+</div>

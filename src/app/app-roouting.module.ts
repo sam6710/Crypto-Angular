@@ -8,13 +8,14 @@ import { RegisterComponent } from "./register/register.component";
 import { CryptosComponent } from "./cryptos/cryptos.component";
 import { AuthGuard } from "./auth/auth.guard";
 import { PieComponent } from "./pie/pie.component";
+import { DetalleComponent } from "./detalle/detalle.component";
 
 const routes:Routes = [
   { path: "", component: LandingPageComponent},
   { path: "sign-in", component: LoginComponent },
   { path: "sign-up", component: RegisterComponent},
   { path: "coins", component: CryptosComponent},
-  // { path: "privado", component: PieComponent, canActivate: [AuthGuard] }
+  { path: "details/:id", component: DetalleComponent},
 ]
 
 @NgModule({

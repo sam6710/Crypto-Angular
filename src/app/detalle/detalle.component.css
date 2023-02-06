@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+#info{
+    display: flex;
+    margin-left: 6%;
+    width: 88%;
+}
+#info img{
+    margin-right: 2rem;
+}
+#texto_moneda h3{
+    margin-left: 15rem;
+}
+#links{
+    text-align: center;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+}
+#links a{
+    text-decoration: none;
+    color: blue;
+    margin-right: 0.4rem;
+}

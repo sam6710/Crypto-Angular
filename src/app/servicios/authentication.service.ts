@@ -8,7 +8,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthP
 })
 export class AuthenticationService {
 
-  logueado:boolean = false;
+  public logueado:boolean = false;
   user_id:string = "";
 
   constructor(public auth:Auth){
@@ -49,6 +49,7 @@ export class AuthenticationService {
     .catch((error)=>{
       var errorMessage = error.message;           
       console.log(errorMessage);
+      this.logueado = false;
     })
   }
 
@@ -63,6 +64,7 @@ export class AuthenticationService {
     }).catch((error) => {
       var errorMessage = error.message;           
       console.log(errorMessage);
+      this.logueado = false;
     });
   }
 
@@ -75,6 +77,7 @@ export class AuthenticationService {
       }else{
         console.log("Usuario deslogueado");
         this.logueado = false;
+        this.user_id = "";
       }
     })
   }
@@ -83,5 +86,6 @@ export class AuthenticationService {
     console.log("Usuario deslogueado");
     signOut(this.auth);
     this.logueado = false;
+    this.user_id = "";
   }
 }

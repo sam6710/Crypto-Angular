@@ -8,6 +8,7 @@
 h1{
     color: lightgray;
     text-align: center;
+    padding-top: 1rem;
 }
 #div_home{
     display: flex;
@@ -17,6 +18,19 @@ h1{
 }
 #intro h3{
     margin-left: 2.6rem;
-    padding-top: 1rem;
+    padding-top: 4rem;
     color: white;
+}
+p{
+    color: white;
+    margin-left: 4rem;
+    width: 60%;
+    margin-top: 1rem;
+}
+h4{
+    text-align: center;
+    color: wheat;
+    position: absolute;
+    top: 136vh;
+    left: 40%;
 }

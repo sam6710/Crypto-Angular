@@ -8,36 +8,35 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <nav class="pagination-sm" aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href>1</a></li>
-          <li class="page-item"><a class="page-link" href>2</a></li>
-          <li class="page-item"><a class="page-link" href>3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <!-- <div class="col-lg-2 d-flex flex-column justify-content-start align-items-start">
-      <table class="allMonedas">
-        <tr *ngFor="let moneda of monedas | slice : (page - 1) * pageSize : page * pageSize">
-          <td (click)="addToFav(moneda.id)">
-            {{ moneda.name }}
-          </td>
-        </tr>
+    <div id="favoritas">
+      <h2>User Coins</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Capitalization</th>
+            <th>Volume</th>
+            <th>Higher price/24h</th>
+            <th>Lower price/24h</th>
+            <td>More Info</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let favourite of favouriteCoins">
+            <td>{{ favourite.name }}</td>
+            <td><img src="{{ favourite.image.thumb }}" alt=""></td>
+            <td>{{ favourite.symbol }}</td>
+            <td>{{ favourite.market_data.current_price.eur }}€</td>
+            <td>{{ favourite.market_data.market_cap.eur }}</td>
+            <td>{{ favourite.market_data.total_volume.eur }}</td>
+            <td>{{ favourite.market_data.high_24h.eur }}</td>
+            <td>{{ favourite.market_data.low_24h.eur }}</td>
+            <td><a href="/details/{{favourite.id}}"><i class="fa fa-plus" aria-hidden="true"></i></a></td>
+          </tr>
+        </tbody>
       </table>
-      <ngb-pagination
-      [(page)]="page"
-      [pageSize]="pageSize"
-      [collectionSize]="monedas.length"></ngb-pagination>
-    </div> -->
+    </div>
 </div>

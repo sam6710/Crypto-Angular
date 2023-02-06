@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
-import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { PieComponent } from './pie/pie.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -17,19 +16,16 @@ import { AppRooutingModule } from './app-roouting.module';
 import { CryptosComponent } from './cryptos/cryptos.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { DetalleMonedaComponent } from './detalle-moneda/detalle-moneda.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
-    CuerpoComponent,
     PieComponent,
     DetalleComponent,
     CryptosComponent,
     LoginComponent,
     RegisterComponent,
-    DetalleMonedaComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,10 +35,7 @@ import { DetalleMonedaComponent } from './detalle-moneda/detalle-moneda.componen
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     AppRooutingModule,
-    NgModule
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
+    // NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
